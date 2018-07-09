@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {AppMaterialModule} from './app-material/app-material.module';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
+import {ApiService} from './app-api/api.service';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppComponent
   ],
   imports: [
-    BrowserModule, AppMaterialModule, BrowserAnimationsModule
+    BrowserModule, AppMaterialModule, HttpClientModule, ApiService
   ],
   providers: [],
   bootstrap: [AppComponent]
